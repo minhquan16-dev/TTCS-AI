@@ -23,11 +23,11 @@ export default function App() {
   if (page === "register") {
     return <RegisterPage onBackToLogin={() => setPage("login")} />;
   }
-  if (page === "home"){
-    return <Home onDangXuat={()=> setPage("home")} />;
+  if (page === "home") {
+    return <Home onLogout={() => setPage("login")} onNavigate={(p) => setPage(p)} />;
   }
   return (
-    <div className="page">
+    <div className="loginPage">
       <div className="card">
         {/* Logo / title */}
         <div className="logo">
